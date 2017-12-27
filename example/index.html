@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <meta http-equiv="content-Type" content="text/html;charset=utf-8"/>
+</head>
+<body>
+<div id='root'></div>
+<script type="text/javascript" src='../dist/JFE.js'></script>
+<script type="text/javascript">
+console.log(JFE.util.isBrowser())
+console.log(JFE.util.formatTime(new Date().getTime(),false,'年月日'))
+console.log(JFE.util.getArrayMaxOrMin([1,2,3,4,5,6.6,0.1,'aaa'],'min'))
+console.log(JFE.util.checkTools.emailCheck('weibin@jusfoun.com'))
+
+
+ const obj1 =  {
+        a:'1',
+        b:{
+           c:'3',
+           d:{
+               e:'4'
+           }
+       }
+        
+    }
+
+const obj2 =  {
+        a:'1',
+         b:{
+           c:'3',
+           d:{
+               e:'4'
+           }
+       }
+        
+    }
+const a = [1,2,3,4,5,6]
+const b = [1,2,3,4,5,6]
+console.log('compare',JFE.util.compare(a,b))
+
+
+const arr = [1,1,2,3,3,5,7]
+console.log('unique',JFE.util.unique(arr))
+
+var min = 1
+var max = 5.5
+
+console.log('random',JFE.util.Random(min,max))
+
+
+function ab(){
+    console.log(1)
+}
+console.log('isType',JFE.util.isType.isObject({}))
+
+console.log('classof',JFE.util.classOf([]))
+
+var obj = {
+    a:'1',
+    b:'1'
+}
+console.log('http://www.baid.com'+JFE.util.urlTrans(obj))
+
+console.log('urlArgs',JFE.util.urlArgs())
+
+</script>
+</body>
+</html>
